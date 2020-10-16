@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup as soup
 import scrapy
 import pandas as pd
 
-
+# This function is incomplete
+# Looks at product page and extracts more granular information
 def item_page(my_url):
     # gets page for GPU
     my_url = 'https://www.newegg.com/evga-geforce-gtx-1080-ti-11g-p4-6591-kr/p/N82E16814487376?Description=GTX'
@@ -19,9 +20,8 @@ def item_page(my_url):
     price = page_soup.findAll('li', {'class': 'price-current'})[0].text
     written_reviews_container =page_soup.findAll('div', {'class':'rating rating-%'})
 
-
-
-
+# Looks through newegg search result page and extracts relevent information
+# Information extracted: name, brand, price, rating, shipping, url
 def build_table(my_url, model):
     # open URL connect --> graps page info/stuff
     uClient = uReq(my_url)
@@ -39,7 +39,7 @@ def build_table(my_url, model):
     containers = containers[4:len(containers)]
 
 
-    headers = ['brand', 'model', 'product_name', 'rating', 'shipping', 'url']
+    headers = ['brand', 'model', 'product_name', 'price',  'rating', 'shipping', 'url']
     df = pd.DataFrame(columns=headers)
 
     # loop through each GPU in container and gather data
@@ -66,8 +66,11 @@ def build_table(my_url, model):
             shipping = shipping_container[0].text
 
             product_url = container.a['href'].split()[0]
-            new_rows = pd.Series([brand, model, product_name, rating, shipping, product_url], index=df.columns)
 
+            price_container = container.findAll('li', {'class', 'price-current'})
+            product_price = price_container[0].text
+
+            new_rows = pd.Series([brand, model, product_name, product_price, rating, shipping, product_url], index=df.columns)
             df = df.append(new_rows, ignore_index=True)
 
     return df
@@ -79,7 +82,7 @@ if __name__ == '__main__':
     # set the number of pages for your URL
 
 
-    headers = ['brand', 'model', 'product_name', 'rating', 'shipping', 'url']
+    headers = ['brand', 'model', 'product_name', 'price',  'rating', 'shipping', 'url']
     master_df = pd.DataFrame(columns=headers)
 
     print('Enter GPU Model (NOTE: Should be the name of the item searched Newegg search bar)')
