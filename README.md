@@ -1,8 +1,9 @@
-# New Egg GPU Scapper
+# Newegg Web Scrapper GPU Database Creator
 
 <br />
 <p align="center">
-  <h3 align="center">New Egg GPU Scapper</h3>
+  <h3 align="center">Newegg Web Scrapper and GPU Database Creator
+</h3>
 
   <p align="center">
   This project is a web scrapper that can be used on Newegg.com to gather product information related to graphics cards.
