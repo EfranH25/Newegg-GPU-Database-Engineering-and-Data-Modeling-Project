@@ -56,7 +56,7 @@ def item_page(my_url=None):
     return df_entry
 
 
-def crawler(df):
+def crawler(df, name):
     """
     :param df: takes a df that has information regarding gpu's from Newegg.com. This df should have a url column for all
     the gpu's in df
@@ -65,7 +65,6 @@ def crawler(df):
     """
     new_col_set = set([])
     new_entry_list = []
-
 
     for row in df['url']:
         print(row)
@@ -82,7 +81,7 @@ def crawler(df):
     new_df = pd.DataFrame(columns=new_col_set)
     new_df = new_df.append(new_entry_list)
 
-    new_df.to_csv('TEST.csv', index=False)
+    new_df.to_csv(f'{name}_Specs.csv', index=False)
 
 
 if __name__ == '__main__':
@@ -92,6 +91,5 @@ if __name__ == '__main__':
     # set the number of pages for your URL
 
     headers = ['brand', 'model', 'product_name', 'price', 'rating', 'shipping', 'url']
-    df = pd.read_csv('../PROJECT - Newegg GPU/Saved Data/products_GTX 1070.csv')
-
-    crawler(df)
+    df = pd.read_csv('C:/Classes/Newegg-Web-Scrapper-GPU-Database-Creator-main/Saved Data/products_RX 570.csv')
+    crawler(df, 'RX 570')
