@@ -31,12 +31,9 @@
 I wanted ot create a web scrapper that can quickly aggregate information on graphics cards from Newegg.com to create a graphics card database to be used for potential data science projects. 
 This project does just that. 
 
-Disclaimer: I am new to data scrapper so I won't comment on the ethical aspect of this script. Please use it responsibly and I will not be sharing the data that I have aggregated with this script. 
-
 ### Summary
 This project utilizes the beatifulsoup python library to scrape GPU information from Newegg.com. Currently the information that is take include brand name, model name, product name,
-rating out of five stars, shipping cost, and item URL. This project currently does not delve into the pages of the individual items on Newegg to scrape more granular information.
-This feature will be implemented in the feature but currently the method for it (item_page) is incomplete. There may be restrictions on the viability of this methods due to Newegg potentially blocking the scrapper.
+rating out of five stars, shipping cost, and item URL. 
 
 ### Tools
 * Python: Language used
