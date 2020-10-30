@@ -104,7 +104,8 @@ if __name__ == '__main__':
 
         master_df = pd.concat([master_df, df])
 
-    file_name = 'products_' + GPU_model + '.csv'
+    file_name = 'products_' + GPU_model
+
     # item_page('https://www.newegg.com/evga-geforce-gtx-1080-ti-11g-p4-6591-kr/p/N82E16814487376?Description=GTX')
-    master_df.to_csv(f'{file_name}.csv')
+    master_df.to_csv(f'{file_name}.csv', index=False)
     print('done')

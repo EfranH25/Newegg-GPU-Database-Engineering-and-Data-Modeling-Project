@@ -69,6 +69,7 @@ def crawler(df, name):
     for row in df['url']:
         print(row)
         new_entry = item_page(row)
+
         new_entry_list.append(new_entry)
 
         for value in new_entry.columns:
@@ -91,5 +92,6 @@ if __name__ == '__main__':
     # set the number of pages for your URL
 
     headers = ['brand', 'model', 'product_name', 'price', 'rating', 'shipping', 'url']
-    df = pd.read_csv('C:/Classes/Newegg-Web-Scrapper-GPU-Database-Creator-main/Saved Data/products_RX 570.csv')
-    crawler(df, 'RX 570')
+    df = pd.read_csv('products_RTX 2080.csv')
+
+    crawler(df, 'RTX 2080')
