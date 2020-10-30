@@ -28,9 +28,9 @@
 
 <!-- Summary -->
 ## Summary
-This project utilizes the beatifulsoup python library to scrape GPU information from Newegg.com. I used this scrapper to gather data from all NVIDIA GPUs released in the past 5 years and produced indivial csv's for each GPU. Once all the data was gather, I used Python to clean the data by ensuring all features had the propper format, all null values were addressed and all variables were converted to more readable features. After that I combined all the GPU csv files into one master file which I am using as the primary source for a tableau visualization workbook. 
+This project utilizes the beatifulsoup python library to scrape GPU information from Newegg.com. I used this scrapper to gather data from all NVIDIA GPUs released in the past 5 years and produced indivial csv's for each GPU. Once all the data was gather, I used Python to clean the data by ensuring all features had the propper format, all null values were addressed and all variables were converted to more readable features. After that I combined all the GPU csv files into one master file which I am using as the primary source for a tableau visualization workbook. If you would like to explore some of the data, feel free to open up the tablea workbook Nvidia Vis to see some of the plots and trends I've created thus far.
 
-To see the before and after process of my data wrangling, all the initial data is stored in the Original Data folder while the current, cleaned data is stored in the Final data folder. All the python files where used to gather and clean the data sources and transform them into the results in the Final data folder.
+To see the before and after process of my data wrangling, all the initial data is stored in the Original Data folder while the current, cleaned data is stored in the Final data folder. All the python files where used to gather and clean the data sources and transform them into the results in the Final data folder. 
 
 ### Future
 For future plans, I indent to repeat the same process but for AMD GPUs.
