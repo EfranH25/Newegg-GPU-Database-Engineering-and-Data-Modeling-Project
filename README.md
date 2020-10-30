@@ -6,7 +6,7 @@
 </h3>
 
   <p align="center">
-  This project is a web scrapper that can be used on Newegg.com to gather product information related to graphics cards.
+  This project is the creation of a GPU database based of information scrapped from Newegg.com. All the product data gathered wrangled, aggregregated, cleaned, and put into a tableau workbook for future visualization. 
     <br />
     <a href="https://github.com/EfranH25/New-Egg-GPU-Scapper"><strong>Explore the Repo</strong></a>
   </p>
@@ -17,8 +17,8 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Background](#Background)
-  * [Summary](#Summary)
+* [Summary](#Summary)
+  * [Future](#Future)
   * [Tools](#Tools)
 * [Usage](#Usage)
   * [Explaination](#Explanation)
@@ -26,18 +26,14 @@
 * [Contact](#contact)
 
 
-<!-- Background -->
-## Background
-I wanted ot create a web scrapper that can quickly aggregate information on graphics cards from Newegg.com to create a graphics card database to be used for potential data science projects. 
-This project does just that. 
+<!-- Summary -->
+## Summary
+This project utilizes the beatifulsoup python library to scrape GPU information from Newegg.com. I used this scrapper to gather data from all NVIDIA GPUs released in the past 5 years and produced indivial csv's for each GPU. Once all the data was gather, I used Python to clean the data by ensuring all features had the propper format, all null values were addressed and all variables were converted to more readable features. After that I combined all the GPU csv files into one master file which I am using as the primary source for a tableau visualization workbook. 
 
-Disclaimer: I am new to data scrapper so I won't comment on the ethical aspect of this script. Please use it responsibly and I will not be sharing the data that I have aggregated with this script. 
+To see the before and after process of my data wrangling, all the initial data is stored in the Original Data folder while the current, cleaned data is stored in the Final data folder. All the python files where used to gather and clean the data sources and transform them into the results in the Final data folder.
 
-### Summary
-This project utilizes the beatifulsoup python library to scrape GPU information from Newegg.com. Currently the information that is take include brand name, model name, product name,
-rating out of five stars, shipping cost, and item URL. This project currently does not delve into the pages of the individual items on Newegg to scrape more granular information.
-This feature will be implemented in the feature but currently the method for it (item_page) is incomplete. There may be restrictions on the viability of this methods due to Newegg potentially blocking the scrapper.
-
+### Future
+For future plans, I indent to repeat the same process but for AMD GPUs.
 ### Tools
 * Python: Language used
 * Beautifulsoup python package: Used to scrape data
