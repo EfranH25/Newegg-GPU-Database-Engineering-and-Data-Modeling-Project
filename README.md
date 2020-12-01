@@ -4,7 +4,9 @@
 <p align="center">
   <h3 align="center">Newegg Web Scrapper and GPU Database Creator
 </h3>
-
+  <p align="center">
+    <img width="270" height="108" src="https://github.com/EfranH25/Newegg-GPU-Database/blob/main/icon.png">
+</p>
   <p align="center">
   This project is the creation of a GPU database based of information scrapped from Newegg.com. All the product data gathered wrangled, aggregregated, cleaned, and put into a tableau workbook for future visualization. 
     <br />
