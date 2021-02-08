@@ -1,4 +1,4 @@
-# Newegg Web Scrapper GPU Database Creator
+# Newegg GPU Data Engineering and Data Modeling Project
 
 <br />
 <p align="center">
