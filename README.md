@@ -1,8 +1,8 @@
-# Newegg GPU Data Engineering and Data Modeling Project
+# Newegg GPU Database Engineering and Data Modeling Project
 
 <br />
 <p align="center">
-  <h3 align="center">Newegg GPU Data Engineering and Data Modeling Project
+  <h3 align="center">Newegg GPU Database Engineering and Data Modeling Project
 </h3>
   <p align="center">
     <img width="270" height="108" src="https://github.com/EfranH25/Newegg-GPU-Database/blob/main/icon.png">
